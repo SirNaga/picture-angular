@@ -1,0 +1,49 @@
+.default-element {
+  width: 60%;
+  border: 2px solid #cccccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.default-element img {
+  width: 40%;
+  height: auto;
+  border-bottom: 1px solid #cccccc;
+}
+
+.text-content p {
+  margin: 5px 0;
+}
+
+.post-description, .post-title{
+  color: white;
+}
+
+.comment{
+  border: 2px solid #cccccc;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px;
+}
+
+.createComment {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 2px solid #cccccc;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px;
+}
+
+.createComment textarea {
+  width: 99%; /* Take all available horizontal space */
+  min-height: 60px; /* Assuming a standard row height, adjust as needed */
+  resize: vertical; /* Allows vertical resizing, can be set to 'none' if resizing is not desired */
+}
+
+.createComment button {
+  margin-top: 10px; /* Adds a little space above the button */
+  align-self: flex-start; /* Aligns the button to the left */
+}

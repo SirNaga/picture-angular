@@ -1,0 +1,25 @@
+<div class="default-element">
+  <div class="post-title">Title: {{ post.title }}</div>
+  <br>
+  <img src="{{getImageUri()}}" alt="Post Image">
+  <br>
+  <br>
+  <div class="post-description">Description: {{ post.description }}</div>
+  <br>
+  <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Comments:
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="comment" *ngFor="let comment of post.comments">
+      {{ comment }}
+    </div>
+    <div class="createComment">
+      <label>Comment the Post: </label>
+      <textarea id="str" [(ngModel)]="str"></textarea>
+      <br>
+      <button mat-raised-button type="submit" (click)="saveComment()">create</button>
+    </div>
+  </mat-expansion-panel>
+</div>

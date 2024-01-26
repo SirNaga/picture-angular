@@ -1,0 +1,27 @@
+<div class="full-screen-container">
+  <button mat-raised-button
+          (click)="toggleButtonClicked()">{{showCreation ? 'Erstellen beenden' : 'Post erstellen'}}</button>
+  <div class="formClass" *ngIf="showCreation">
+    <form [formGroup]="createPostForm" (ngSubmit)="onSubmit()">
+      <mat-form-field style="width:400px">
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title">
+      </mat-form-field>
+      <mat-form-field style="width:400px">
+        <mat-label>Link</mat-label>
+        <input matInput formControlName="link" >
+      </mat-form-field>
+      <mat-form-field style="width:400px">
+        <mat-label>Description</mat-label>
+        <input matInput formControlName="description">
+      </mat-form-field>
+      <button mat-raised-button type="submit">Erstellen</button>
+    </form>
+
+  </div>
+  <br>
+  <app-default-list-element *ngFor="let post of posts"
+                            [post]=post></app-default-list-element>
+  <br>
+</div>
+
