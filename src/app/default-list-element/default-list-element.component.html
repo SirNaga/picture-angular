@@ -3,6 +3,8 @@
   <br>
   <img src="{{getImageUri()}}" alt="Post Image">
   <br>
+  <div class="post-username">Username: {{post.username}}</div>
+  <br>
   <br>
   <div class="post-description">Description: {{ post.description }}</div>
   <br>
@@ -16,8 +18,8 @@
       {{ comment }}
     </div>
     <div class="createComment">
-      <label>Comment the Post: </label>
-      <textarea id="str" [(ngModel)]="str"></textarea>
+      <label for="commentArea{{post.id}}">Comment the Post: </label>
+      <textarea id="commentArea{{post.id}}" name="commentArea" [(ngModel)]="str"></textarea>
       <br>
       <button mat-raised-button type="submit" (click)="saveComment()">create</button>
     </div>

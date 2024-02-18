@@ -23,6 +23,7 @@ export class DefaultListElementComponent implements OnInit{
   saveComment(){
     this.post.comments.push(this.str);
     this.restService.saveComment(this.post);
+    this.str = "";
   }
 
   getImageUri(): string{

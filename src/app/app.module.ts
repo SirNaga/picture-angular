@@ -17,6 +17,7 @@ import {DefaultListElementComponent} from "./default-list-element/default-list-e
 import {MatExpansionModule} from "@angular/material/expansion";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
+import {NgxMatFileInputModule} from "@angular-material-components/file-input";
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {MatInputModule} from "@angular/material/input";
     MatExpansionModule,
     ReactiveFormsModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    NgxMatFileInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
