@@ -1,13 +1,24 @@
 <div class="default-element">
-  <div class="post-title">Title: {{ post.title }}</div>
-  <br>
-  <img src="{{getImageUri()}}" alt="Post Image">
-  <br>
-  <div class="post-username">Username: {{post.username}}</div>
-  <br>
-  <br>
-  <div class="post-description">Description: {{ post.description }}</div>
-  <br>
+  <div class="content">
+    <div class="post-title">Title: {{ post.title }}</div>
+    <br>
+    <img src="{{getImageUri()}}" alt="Post Image">
+    <br>
+    <div class="post-username">Username: {{post.username}}</div>
+    <br>
+    <br>
+    <div class="post-description">Description: {{ post.description }}</div>
+    <br>
+    <div class="counter-controls">
+      <button mat-icon-button (click)="decrementCount()">
+        <mat-icon>arrow_left</mat-icon>
+      </button>
+      <span>{{ count }}</span>
+      <button mat-icon-button (click)="incrementCount()">
+        <mat-icon>arrow_right</mat-icon>
+      </button>
+    </div>
+  </div>
   <mat-expansion-panel hideToggle>
     <mat-expansion-panel-header>
       <mat-panel-title>

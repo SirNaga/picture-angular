@@ -10,9 +10,10 @@ import {restService} from "../../services/restService";
 })
 export class DefaultListElementComponent implements OnInit{
   @Input() post!: Post;
-  imageUrl: string = "http://localhost:8080/file/download/"
+  imageUrl: string = "http://localhost:9090/file/download/"
   defaultId: string = "65aee626fb7cfd511db055ee"
   str: string = "";
+  count: number = 0;
 
   constructor( private restService: restService) {}
 
@@ -32,5 +33,16 @@ export class DefaultListElementComponent implements OnInit{
     }
     return this.imageUrl + this.post.imageId;
   }
+
+  incrementCount() {
+    this.count++;
+  }
+
+  decrementCount() {
+    if (this.count > 0) {
+      this.count--;
+    }
+  }
+
 
 }

@@ -14,16 +14,16 @@ export class restService {
   constructor(private http: HttpClient) { }
 
 
-  public savePost(post: Post){
-    this.http.post<Post>('http://localhost:8080/post/create', post).subscribe();
+  public savePost(post: Post) : Observable<any>{
+    return this.http.post<Post>('http://localhost:9090/post/create', post);
   }
   public saveComment(post: Post){
     const id = post.id;
-    this.http.put<Post>('http://localhost:8080/post/update/'+id, post).subscribe();
+    this.http.put<Post>('http://localhost:9090/post/update/'+id, post).subscribe();
   }
 
   uploadImage(formData: FormData): Observable<any> {
-    return this.http.post('http://localhost:8080/file/upload', formData);
+    return this.http.post('http://localhost:9090/file/upload', formData);
   }
 
 }

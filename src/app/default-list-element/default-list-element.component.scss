@@ -47,3 +47,24 @@
   margin-top: 10px; /* Adds a little space above the button */
   align-self: flex-start; /* Aligns the button to the left */
 }
+
+.counter-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+  span {
+    margin: 0 10px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  //min-height: 100vh; // This ensures the container takes at least the full height of the viewport
+}
+
+
